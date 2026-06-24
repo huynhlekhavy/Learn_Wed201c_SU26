@@ -223,3 +223,17 @@
         + Một phần tử có thể nhận 1 hoặc nhiều class            |   + Một phần tử chỉ nhận duy nhất 1 id
         + Một tên class có thể đặt cho nhiều phần tử khác nhau  |   + Một tên id chỉ dùng để đặt tên cho 1 phần tử duy nhất
         + Khi chọn 1 phần tử theo class cú pháp: .ten-class     |   + Khi chọn 1 phần tử theo id cú pháp: #ten-id
+
+🛎️Nhúng Iframe
+- Thẻ <iframe></iframe> được sử dụng để hiển thị một trang web trong một trang web
+- Cú pháp:
+<iframe src="url" title="description" height="200" width="300"></iframe>
+- Ví dụ: 
++ <iframe src="https://daca.vn/" title="Website Daca" height="600" width="1200"></iframe>
++ <iframe src="https://khoahoc.28tech.com.vn/" title="Website 28Tech" height="600" width="1200"></iframe>
+- Mục tiêu cho một liên kết:
++ Thuộc tính target của liên kết phải tham chiếu đến thuộc tính name của iframe 
+- Ví dụ: 
++ <iframe src="https://www.bing.com" name="web_bing" height="600" width="1000"></iframe>
++ <p><a href="https://coccoc.com/search" target="web_bing">Tìm kiếm trên Cốc Cốc</a></p>
+- Lưu ý: Một số trang như google.com không cho phép nhúng iframe, nên sẽ thấy thông báo từ chối kết nối, chỉ những trang nào cho phép nhúng vào thì ta mới nhúng được.
