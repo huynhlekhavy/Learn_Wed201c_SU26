@@ -1,0 +1,117 @@
+Bài 1: Giới thiệu khoá học, học HTML
+📩Giới thiệu về khoá học
+* Lập trình Front-end là gì?
+- Tạo ra giao diện website để người dùng nhìn thấy được
+- Tạo ra giao diện website để người dùng có thể tương tác được
+- Các bạn sẽ làm việc với designer và đội back-end
+* Mục tiêu chính của khóa học
+- Tự tay lập trình được giao diện web theo bản thiết kế
+- Giúp bạn nắm vững được kiến thức nền tảng
+- Đủ khả năng ứng tuyển được tại các công ty
+📩Giới thiệu về công việc Front-end trong thực tế
+* Mức lương lập trình viên theo năm kinh nghiệm
+- FRESHER/ JUNIOR (Dưới 2 năm): $342-$530
+- MID-SENIOR (2-4 năm): $525-$1.161
+- SENIOR (>5 năm): $835-$1.340
+- MANAGEMENT LEVEL (Theo định hướng Business) (>5 năm): $1.368-$2.185
+- MANAGEMENT LEVEL (Theo định hướng Technical) (>5 năm): $1.560-$2.398
+- DIRECTOR & CAO HƠN (Theo định hướng Business) (>10 năm): FROM $2.200
+- DIRECTOR & CAO HƠN (Theo định hướng Technical) (>10 năm): FROM $2.600
+* Một số project thực tế
+- Landing page Luxcat
+- Website bán cây xanh
+- Website bán tour du lịch
+* Tìm job tuyển dụng tại
+- https://www.topcv.vn/
+- https://itviec.com/
+- Group tuyển dụng IT trên Facebook
+📩Khái niệm UI-UX
+* UI là gì? 
+- UI Design (User Interface Design): là thiết kế giao diện người dùng
+- Nếu website đẹp sẽ khiến nhiều người thích thú, tạo được thiện cảm tốt, tăng được độ tin 
+* UX là gì?
+- UX Design (User Experience Design): là thiết kế trải nghiệm người dùng
+- UX là các thao tác mà người dùng thực hiện trên website
+📩Hướng dẫn cài đặt phần mềm
+* Phần mềm: Visual Studio Code
+* Extensions (Tiện ích mở rộng)
+- Auto Rename Tag-Tự động sửa tên thẻ
+- Beautify-Làm đẹp code
+- Color Hightlight-Hiển thị màu sắc theo mã màu
+- CSS Variables Autocomplete-Gợi ý các biến trong CSS để code nhanh hơn
+- HTML Boilerplate-Tạo khung HTML được soạn sẵn
+- HTML Snippets-Gợi ý code HTML 
+- Live Server-Khi lưu code thì web tự load lại
+- Material Icon Theme-Icon cho theme dễ nhìn hơn 
+- Path Intellisense-Gợi ý đường dẫn các file
+📩Học HTML
+1. Khái niệm 
+- HTML viết tắt của Hyper Text Markup Language
+- Là ngôn ngữ đánh dấu siêu văn bản
+- Không phải ngôn ngữ lập trình
+- HTML có tác dụng tạo bố cục và định dạng trang web 
+2. Cấu trúc file HTML và ý nghĩa các thẻ 
+- <!DOCTYPE html>: DOCTYPE dịch ra là kiểu tài liệu, tức là để khai báo đây là kiểu tài liệu gì. Cụ thể điền html có nghĩa là đây là tài liệu viết bằng HTML
+- <html></html>: Cặp thẻ bắt buộc, có nhiệm vụ đóng gói tất cả nội dung của trang HTML
+- <head></head>: Khai báo các thông tin meta của trang web như: tiêu đề trang, charset
+- <title></title>: Cặp thẻ nằm bên trong thẻ <head>, dùng để khai báo tiêu đề của trang
+- <body></body>: Cặp thẻ dùng để đóng gói tất cả các nội dung sẽ hiển thị trên trang
+- <h1></h1>: Phần tử xác định một tiêu đề lớn
+- <p></p>: Phần tử xác định một đoạn văn bản
+3. Hướng dẫn sử dụng Dev tools
+4. Một số thẻ <meta>
+- <meta charset="UTF-8">: Xác định bộ ký tự được sử dụng, utf-8 để hỗ trợ hiển thị tiếng Việt
+- <meta name="keywords" content="HTML,CSS,JavaScript">: Xác định từ khóa cho công cụ tìm kiếm
+- <meta name="description" content="Free Web tutorials">: Xác định mô tả về trang web của bạn
+- <meta name="author" content="John Doe">: Xác định tác giả của một trang 
+- <meta name="viewport" content="with=device-width, initial-scale=1.0">: Đặt chế độ xem để làm cho trang web của bạn hiển thị tốt trên tất cả các thiết bị
+5. Tạo Comments, Elements, Attributes
+* Comments (Chú thích)
+- Là các chú thích để dễ nhớ và dễ nhìn hơn, hiểu được đoạn code đấy có ý nghĩa gì. Không hiển thị lên giao diện website
+- Cú pháp: <!-- -->
+- Phím tắt: Ctrl+/ (Windows) hoặc Cmd+/ (Mac)
+* Elements (Phần tử)
+- Được xác định bởi:
+    + Một thẻ bắt đầu
+    + Một vài nội dung
+    + Một thẻ kết thúc
+- Cú pháp: <tagname>Nội dung...</tagname>
+- Trong đó:
+    + <tagname>: Thẻ bắt đầu của element 
+    + </tagname>: Thẻ kết thúc của element 
+    + Nội dung...: Nội dung của element 
+- Các tagname không phân biệt chữ hoa, thường. Nhưng nên viết chữ thường
+* Attributes (Thuộc tính)
+- Sẽ cung cấp thêm thông tin cho các element, nằm trong thẻ mở
+- Một element có thể có nhiều thuộc tính
+- Cú pháp: <tagname attribute-name="value">Nội dung...</tagname>
+- Trong đó:
+    + attribute-name: Tên thuộc tính
+    + "value": Giá trị của thuộc tính 
+6. Tạo Headings, Paragraphs, Formatting
+* Headings (Tiêu đề)
+- Là những tiêu đề hoặc phụ đề hiển thị trên web
+- Có 6 thẻ heading 
+    + <h1></h1>: Thẻ tiêu đề quan trọng nhất. Mỗi trang chỉ có 1 thẻ h1. Nếu 1 trang có nhiều thẻ h1 thì web vẫn chạy nhưng như vậy sẽ không chuẩn SEO.
+    + <h2></h2>
+    + <h3></h3>
+    + <h4></h4>
+    + <h5></h5>
+    + <h6></h6>: Thẻ tiêu đề ít quan trọng nhất
+* Paragraphs (Đoạn văn)
+- Luôn luôn bắt đầu trên 1 dòng mới và thường là một khối văn bản
+- Cú pháp: <p>Nội dung...</p>
+- Một số thẻ liên quan:
+    + <hr> (horizontal rules - quy tắc ngang): Dùng để ngắt theo chủ đề, và được hiển thị dưới dạng 1 đường kẻ ngang (empty tag - thẻ trống)
+    + <br> (break - ngắt): Dùng để ngắt dòng trong 1 đoạn văn bản
+* Formatting (Định dạng)
+- <b></b> (bold-in đậm): Văn bản in đậm
+- <strong></strong>: Văn bản in đậm và quan trọng
+- <i></i>: Văn bản in nghiêng
+- <em></em> (emphasized-nhấn mạnh): Văn bản in nghiêng và quan trọng
+- <small></small>: Văn bản chữ nhỏ hơn 
+- <sub></sub> (subscripted-chỉ số dưới): Văn bản có chỉ số dưới
+- <sup></sup> (superscripted-chỉ số trên): Văn bản có chỉ số trên
+- <ins></ins> (inserted-chèn): Văn bản được chèn, có gạch chân bên dưới
+- <del></del> (deleted-đã xóa): Văn bản đã xóa
+- <mark></mark> (marked-đánh dấu): Văn bản được đánh dấu
