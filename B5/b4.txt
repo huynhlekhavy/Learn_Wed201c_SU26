@@ -1,0 +1,254 @@
+
+🛎️Khái niệm, cú pháp, selectors
+1. Khái niệm
+- CSS: viết tắt của Cascading Style Sheets
+- Là ngôn ngữ được dùng để định dạng kiểu hiển thị cho các phần tử HTML
+2. Cú pháp:
+selector {
+    property: value;
+}
+Trong đó:
+    + selector: Được gọi là bộ chọn
+    + property: Được gọi là thuộc tính
+    + value: Được gọi là giá trị của thuộc tính
+3. Selectors (Bộ chọn)
+- Bộ chọn CSS chọn(các) phần tử HTML mà bạn muốn tạo kiểu
+- Ví dụ: Các thẻ <h1>, <p>, <table>,...thì viết trong css sẽ chỉ lấy tên thẻ là h1, p, table 
+- Bộ chọn CSS được chia thành 5 loại:
++ Simple selectors (Bộ chọn đơn giản)
++ Combinator selectors (Bộ chọn tổ hợp)
++ Pseudo-class selectors (Bộ chọn lớp giả)
++ Pseudo-elements selectors (Bộ chọn phần tử giả)
++ Attribute selectors (Bộ chọn thuộc tính)
+4. Simple selectors (Bộ chọn đơn giản)
+- Bộ chọn element (element selector) chọn các phần tử HTML dựa trên tên phần tử
+p {
+    text-align: center;
+    color: red;
+}
+- Bộ chọn id (id selector): Sử dụng thuộc tính id (identifier - định danh) của một phần tử HTML để chọn một phần tử cụ thể. Lưu ý: Tên id không được bắt đầu bằng số
+#title {
+    text-align: center;
+    color: red;
+}
+- Bộ chọn class (class selector): chọn các thành phần HTML với một thuộc tính class cụ thể. Lưu ý: Tên class không được bắt đầu bằng số
+.title {
+    text-align: center;
+    color: red;
+}
+- Bộ chọn chung (universal selector): chọn tất cả các thành phần HTML trên trang
+* {
+    text-align: center;
+    color: red;
+}
+- Bộ chọn nhóm (grouping selector): Bộ chọn nhóm chọn tất cả các element, id, class có cùng thuộc tính và giá trị thuộc tính 
+h1, h2, p {
+    text-align: center;
+    color: red;
+}
+🛎️3 kiểu chèn CSS 
+1. Inline CSS (Nội tuyến)
+- Ta sẽ thêm thuộc tính style vào trong thẻ mà muốn sửa CSS
+- Có thể được sử dụng để áp dụng một kiểu duy nhất cho một element
+- Ví dụ: <p style="color: red;"> This is a paragraph</p>
+2. Internal CSS (Nội bộ)
+- Ta sẽ thêm thẻ <style></style> vào bất cứ đâu trong file html, sau đó viết CSS vào trong thẻ <style> đó
+- Thường thì thẻ <style> này sẽ nằm trong thẻ <head></head>
+- Có thể được sử dụng nếu có một trang HTML duy nhất
+- Ví dụ: 
+<style>
+    p {
+        color: red;
+    }
+</style>
+3. External CSS (Bên ngoài)
+- Ta thêm 1 file CSS ở bên ngoài, sau đó dùng thẻ <link /> đặt ở trong thẻ <head></head> và chèn đường dẫn vào thuộc tính href ở trong thẻ link 
+- Có thể thay đổi giao diện của toàn bộ trang web bằng cách chỉ thay đổi một tệp
+- Ví dụ: <link rel="stylesheet" href="mystyle.css"
+Lưu ý: Nếu trùng bộ chọn và tên thuộc tính, thì giá trị của bộ chọn cuối cùng được sử dụng
+h1 {
+    color: navy;
+}
+h1 {
+    color: orange;
+}
+-> Màu được chọn sẽ là màu orange 
+🛎️Colors (Màu sắc), Backgrounds (Nền)
+1. Colors (Màu sắc)
+- Cài đặt phần mềm Just Color Picker
+- Colors: Màu sắc được gán giá trị bằng cách sử dụng:
++ Một số màu được đặt tên sẵn: white, black, red, green, blue, yellow, orange,...(ít sử dụng)
++ HEX (Phổ biến nhất)
+    -- Màu HEX được chỉ định bằng: #RRGGBB, trong đó các số nguyên thập lục phân RR(đỏ), GG(xanh lục), BB(xanh dương) chỉ định các thành phần của màu 
+    -- Cú pháp: #RRGGBB
+    -- Ví dụ: #000000(màu đen), #FFFFFF(màu trắng), #FF0000(màu đỏ)
+    h1 {
+        color: #FF0000;
+    }
++ RGB (ít sử dụng)
++ HSL (cực ít sử dụng)
+2. Backgrounds (Nền): dùng để thêm nền vào cho element
+* Một số thuộc tính
+- background-color: nền là màu sắc
++ Ví dụ:
+body {
+    background-color: lightblue;
+}
+- background-clip: xác định phạm vi được thiết lập màu nền của phần tử (Áp dụng cho background là màu sắc)
++ border-box: Mặc định. Đổ màu từ content cho đến hết border
++ padding-box: Đổ màu từ content cho đến hết padding
++ content-box: Chỉ đổ màu phần content 
+- background-image: nền là hình ảnh hoặc màu gradient
++ Giá trị là kiểu hình ảnh 
+-- Ví dụ: background-image: url("hinh-anh.jpg");
++ Có thể chèn nhiều hình ảnh: (url nào ở trước thì sẽ nằm bên trên)
+-- Ví dụ: background-image: url("hinh-1.png"), url("hinh-2.jpg");
++ Có thể là kiểu gradient: Tạo ra một dải màu chuyển đổi từ màu này đến màu khác
+-- Ví dụ: background-image: linear-gradient(180deg, #000000, #ffffff);
++ Kết hợp cả hình ảnh và gradient:
+-- Ví dụ: background-image: linear-gradient(180deg, #00000080, #ffffffad), url("hinh-anh.jpg");
+- background-size: Kích thước của background
++ Giá trị có thể là đơn vị (px, %,...)
+-- Ví dụ: background-size: 100% auto;
++ contain: sẽ co dãn hình ảnh để hình ảnh nằm trọn trong khung hình element, hình ảnh không bị vỡ
+-- Ví dụ: background-size: contain;
++ cover: kéo dẫn hình ảnh sao cho vừa với khung, cắt bỏ đi những phần ảnh thừa để hình ảnh không bị vỡ
+-- Ví dụ: background-size: cover;
+- background-repeat: nền được lặp lại hay không 
++ Ví dụ: 
+    background-repeat: no-repeat; // Không lặp lại ảnh
+    background-repeat: repeat-x; // Lặp theo trục ngang
+    background-repeat: repeat-y; // Lặp theo trục dọc
+- background-position: vị trí hình nền so với element. Có các giá trị: top, left, right, bottom, center
++ Ví dụ:
+    background-position: top left; // trên - trái
+    background-position: top right; // trên - phải
+    background-position: top center; // trên - giữa
+    background-position: bottom left; // dưới - trái
+    background-position: bottom right; // dưới - phải
+    background-position: bottom 30px right 20px; // cách dưới 30px - cách phải 20px 
+- background-attachment: nền sẽ được cuộn hoặc cố định
++ Ví dụ: 
+    background-attachment: fixed; // Hình nền được fix cố định khi di cuộn web 
+- background-origin: giống background-clip, nhưng background-clip là dành cho nền là màu sắc còn background-origin là dùng cho nền ảnh
++ content-box: background chỉ chiếm phần content 
++ padding-box: background chiếm phần content và padding
++ border-box: background chiếm phần content, padding, border
+- background (cách viết ngắn)
++ Ví dụ:
+    background: #ffffff url("hinh-anh.png") no-repeat top right;
+🛎️Box Model, Borders, Padding, Margins
+1. Box Model (Mô hình hộp)
+- Tất cả các element có thể được coi là các cái hộp
+- Hộp này bao gồm: lề, đường viền, phần đệm và nội dung
+- Vào dev tools chọn tab Computed sẽ thấy sơ đồ của một element dùng để biểu diễn cho element ta đã chọn
++ Content (Nội dung) - Nội dung của element, nơi văn bản và hình ảnh xuất hiện
++ Padding - Tạo một khoảng trống xung quanh nội dung. Phần đệm trong suốt
++ Border (Đường viền): Đường viền bao quanh padding (phần đệm) và nội dung 
++ Margin (Lề) - Tạo khoảng cách cho vùng bên ngoài border (đường viền). Lề trong suốt
+2. Borders (Đường viền)
+- Đường viền bao quanh padding (phần đệm) và nội dung. Dùng để bao bọc 1 element
+- Tên thuộc tính: border-style
+- Các kiểu border: 
++ dotted - Đường viền chấm
++ dashed - Đường viền nét đứt
++ solid - Đường viền liền
++ double - Đường viền kép
++ groove - Đường viền có rãnh 3D
++ ridge - Đường viền có gờ 3D
++ inset - Đường viền 3D chìm vào trong 
++ outset - Đường viền 3D nổi lên trên
++ none - Không có viền
++ hidden - Đường viền bị ẩn
+3. Padding (Phần đệm)
+- Padding (phần đệm) tạo một khoảng trống xung quanh nội dung, và nằm bên trong đường viền
+- Ví dụ: 
+div {
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 80px;
+}
+
+div {
+    padding: 25px;
+}
+
+div {
+    padding: 25px 50px;
+}
+4. Margin (Lề)
+- Margin (Lề) để tạo khoảng cách giữa các element này với element khác. Margin nằm bên ngoài border
+- Ví dụ: 
+p {
+    margin-top: 100px;
+    margin-right: 100px;
+    margin-bottom: 150px;
+    margin-left: 80px;
+}
+
+p {
+    margin: 25px;
+}
+
+p {
+    margin: 25px 50px;
+}
+🛎️Thuộc tính height, width
+- height: Chiều cao của element
+- width: Chiều rộng của element
+- min-height: Chiều cao tối thiểu của element
+- min-width: Chiều rộng tối thiểu của element
+- max-height: Chiều cao tối đa của element
+- max-width: Chiều rộng tối đa của element
+- Lưu ý: Chiều cao và chiều rộng là của phần content nằm bên trong phần padding. Không bao gồm padding, border, margin
+- padding * 2 + content < height
+🛎️Text, Fonts, Icons
+* Text
+- Text Color: thuộc tính color được sử dụng để đặt màu cho văn bản 
+-- Ví dụ: color: green 
+- Text Align: được sử dụng để thiết lập căn lề ngang của văn bản 
++ text-align: center; // Căn giữa
++ text-align: left; // Căn trái
++ text-align: right; // Căn phải
++ text-align: justify; // Căn đều 2 bên 
+- Text Transform: thuộc tính text-transform được sử dụng để chỉ định chữ hoa và chữ thường trong văn bản
++ text-transform: uppercase; // viết chữ hoa
++ text-transform: lowercase; // viết chữ thường
++ text-transform: capitalize; // viết hoa các chữ cái đầu
+* Fonts
+- Trong CSS có năm họ phông chữ
++ Phông chữ Serif (có chân) có một nét nhỏ ở các cạnh của mỗi chữ cái
++ Phông chữ Sans-serif (không chân) có đường kẻ rõ ràng (không có nét nhỏ đi kèm)
++ Phông chữ Monospace (Đơn cách) - ở đây tất cả các chữ cái có cùng chiều rộng cố định
++ Phông chữ Cursive (Chữ viết ẩu) bắt chước chữ viết tay của con người
++ Phông chữ Fantasy (tưởng tượng) là phông chữ trang trí/vui tươi
+- Trang google fonts: https://fonts.google.com/
+- Thuộc tính font-family: Để chỉ định font chữ của văn bản 
+-- Ví dụ: 
+    font-family: "Times New Roman",Times,serif;
+    font-family: Arial, Helvetica,sans-serif;
+    font-family: "Lucida Console","Courier New",monospace;
+- font-style: Thuộc tính font-style chủ yếu được sử dụng để chỉ định văn bản in nghiêng
++ Thuộc tính này có 3 giá trị
+    normal - Văn bản được hiển thị bình thường 
+    italic - Văn bản được hiển thị in nghiêng 
+    oblique (xiên) - Văn bản "nghiêng" (xiên rất giống với chữ nghiêng, nhưng nghiêng hơn và ít được sử dụng)
+- Font Weight
++ Thuộc tính font-weight để chỉ định độ dày của chữ 
++ Giá trị có thể là: normal, bold, 100, 200, 300,...,800, 900
+-- Ví dụ:
+    font-weight: 700;
+    font-weight: bold;
+    font-weight: normal;
+    font-weight: 400;
+- Font Size:
++ Thuộc tính font-size dùng để đặt kích thước của văn bản 
+-- Ví dụ: 
+    font-size: 12px;
+    font-size: 14px;
+    font-size: 16px;
+    font-size: 18px;
+* Icons
+- Link website: https://fontawesome.com/search?o=r&m=free
+- Link CDN: https://cdnjs.com/libraries/font-awesome
